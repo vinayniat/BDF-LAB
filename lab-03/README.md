@@ -55,19 +55,21 @@ Use `Content-Type: application/json` for request bodies.
 
 ## Screenshots
 
-The following captures show successful responses and expected error statuses from the running local API.
+The welcome page, GET collection, search/filter, single-book, missing-book, and invalid-query captures below were taken in Microsoft Edge against the deployed Render API. The browser address bar sends GET requests; POST/PUT/DELETE captures are retained from the earlier local API run.
 
-![Default collection list](screenshots/01_get_books.png)
+![Live API welcome page](screenshots/00_api_welcome.png)
 
-![Search, price range, sorting and pagination](screenshots/01b_search_filter.png)
+![Live default collection list](screenshots/01_get_books.png)
 
-![Retrieve an existing book](screenshots/02_get_book.png)
+![Live search, price range, sorting and pagination](screenshots/01b_search_filter.png)
 
-![Missing book returns 404](screenshots/02b_missing_book.png)
+![Live retrieval of an existing book](screenshots/02_get_book.png)
+
+![Live missing book response](screenshots/02b_missing_book.png)
 
 ![Create book returns 201](screenshots/03_create_book.png)
 
-![Invalid price returns 400](screenshots/04_validation.png)
+![Invalid sort query returns 400](screenshots/04_validation.png)
 
 ![Update returns 200](screenshots/05_update.png)
 
