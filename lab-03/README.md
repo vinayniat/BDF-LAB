@@ -2,7 +2,7 @@
 
 **MANDIPALLI VINAY ESHWAR REDDY** · Registration number: **252U1R9094** · Section: **CSE-GEN-AI 2B 111**
 
-**Live link:** Not deployed yet. Deploy this Express service to Render, Railway, or NxtWave Cloud IDE and replace this line with its public URL. Local verification and screenshots are included below.
+**Live link:** [https://bdf-lab-03-api.onrender.com](https://bdf-lab-03-api.onrender.com) · Render free web service (Singapore). The local SQLite catalog is seeded on startup; its contents can reset when the free instance restarts.
 
 ## Objective
 
@@ -79,6 +79,7 @@ The following captures show successful responses and expected error statuses fro
 - **Wrong import path:** `setupDb.js` imports the installed `sqlite3` module and reads the schema from `__dirname`, so it works when run from this folder.
 - **Table name typo:** the schema and queries consistently use the singular `book` table.
 - **Missing `await`:** database open, reads, inserts, updates, and deletes are awaited before their results are used or responses are sent.
+- **Render SQLite native binary:** the deployment compiles `sqlite3` from source so the native module matches Render's system libraries.
 - **SQL injection:** values use `?` placeholders. Sort column/direction are validated against explicit allow-lists because SQL identifiers cannot be bound as values.
 
 ## Viva preparation
