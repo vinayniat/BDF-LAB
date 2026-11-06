@@ -14,7 +14,7 @@ const sendError = (response, status, message) => response.status(status).json({ 
 const isPositiveId = (value) => /^\d+$/.test(value) && Number(value) > 0;
 
 app.get('/', (_request, response) => {
-  response.json({ 'Book Management API — Lab 3' });
+  response.type('text/plain').send('Book Management API Lab 3');
 });
 
 // GET /books supports partial title search, safe sorting, price range and pagination.
