@@ -1,4 +1,5 @@
 const express = require('express');
+const fs = require('fs');
 const path = require('path');
 const { open } = require('sqlite');
 const sqlite3 = require('sqlite3');
@@ -156,6 +157,12 @@ app.use((error, _request, response, _next) => {
 async function initializeDBAndServer() {
   try {
     db = await open({ filename: databasePath, driver: sqlite3.Database });
+    const table = await db.get("SELECT name FROM sqlite_master WHERE type = 'table' AND name = ?", ['book']);
+    const row = table ? await db.get('SELECT COUNT(*) AS count FROM book') : null;
+    if (!table || row.count === 0) {
+      await db.exec(fs.readFileSync(path.join(__dirname, 'initDB.sql'), 'utf8'));
+      console.log('Initialized the sample book catalog.');
+    }
     const port = Number(process.env.PORT) || 3000;
     const server = app.listen(port, () => console.log(`Server running at http://localhost:${port}/`));
     server.on('error', (error) => {
