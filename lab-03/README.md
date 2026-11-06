@@ -55,17 +55,23 @@ Use `Content-Type: application/json` for request bodies.
 
 ## Screenshots
 
-Save real Postman captures in this folder using the names below. Capture successful responses and the failure cases, including the status code and response body. For deployment, add a screenshot of the public URL responding. These local captures must be taken after running the project; they are intentionally left as placeholders here.
+The following captures show successful responses and expected error statuses from the running local API.
 
-- `screenshots/01_get_books.png` — default list and query filters.
-- `screenshots/02_get_book.png` — existing book and missing ID.
-- `screenshots/03_create_book.png` — 201 create response.
-- `screenshots/04_validation_errors.png` — missing fields and invalid price (400).
-- `screenshots/05_update_book.png` — update success and missing ID.
-- `screenshots/06_delete_book.png` — delete success and missing ID.
-- `screenshots/07_database.png` — SQLite book table after operations.
+![Default collection list](screenshots/01_get_books.png)
 
-Embed each capture in this README when added, for example: `![GET books response](screenshots/01_get_books.png)`.
+![Search, price range, sorting and pagination](screenshots/01b_search_filter.png)
+
+![Retrieve an existing book](screenshots/02_get_book.png)
+
+![Missing book returns 404](screenshots/02b_missing_book.png)
+
+![Create book returns 201](screenshots/03_create_book.png)
+
+![Invalid price returns 400](screenshots/04_validation.png)
+
+![Update returns 200](screenshots/05_update.png)
+
+![Delete missing book returns 404](screenshots/06_delete_missing.png)
 
 ## Debugging notes
 
