@@ -55,7 +55,7 @@ Use `Content-Type: application/json` for request bodies.
 
 ## Screenshots
 
-All screenshots below show live responses from the deployed Render API in Microsoft Edge. GET requests were opened directly; POST, PUT, and DELETE were run from a temporary browser capture page. The test book was deleted after the screenshots were taken.
+All screenshots below show live responses from the deployed Render API in Microsoft Edge. The create, update, and delete examples show the paginated book list before and after each change: the test book appears after creation, shows its updated details, and is absent after deletion. The test book was removed after the captures.
 
 ![Live API welcome page](screenshots/00_api_welcome.png)
 
