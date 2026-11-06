@@ -55,7 +55,7 @@ Use `Content-Type: application/json` for request bodies.
 
 ## Screenshots
 
-The welcome page, GET collection, search/filter, single-book, missing-book, and invalid-query captures below were taken in Microsoft Edge against the deployed Render API. The browser address bar sends GET requests; POST/PUT/DELETE captures are retained from the earlier local API run.
+All screenshots below show live responses from the deployed Render API in Microsoft Edge. GET requests were opened directly; POST, PUT, and DELETE were run from a temporary browser capture page. The test book was deleted after the screenshots were taken.
 
 ![Live API welcome page](screenshots/00_api_welcome.png)
 
@@ -67,13 +67,15 @@ The welcome page, GET collection, search/filter, single-book, missing-book, and 
 
 ![Live missing book response](screenshots/02b_missing_book.png)
 
-![Create book returns 201](screenshots/03_create_book.png)
+![Live create book response returns 201](screenshots/03_create_book.png)
 
 ![Invalid sort query returns 400](screenshots/04_validation.png)
 
-![Update returns 200](screenshots/05_update.png)
+![Live update response returns 200](screenshots/05_update.png)
 
-![Delete missing book returns 404](screenshots/06_delete_missing.png)
+![Live delete for a missing book returns 404](screenshots/06_delete_missing.png)
+
+![Live delete response returns 200](screenshots/07_delete_book.png)
 
 ## Debugging notes
 
