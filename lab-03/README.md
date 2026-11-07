@@ -55,27 +55,39 @@ Use `Content-Type: application/json` for request bodies.
 
 ## Screenshots
 
-All screenshots below show live responses from the deployed Render API in Microsoft Edge. The create, update, and delete examples show the paginated book list before and after each change: the test book appears after creation, shows its updated details, and is absent after deletion. The test book was removed after the captures.
+The following Postman captures show requests and responses from the deployed Render API.
 
-![Live API welcome page](screenshots/00_api_welcome.png)
+### List all books
 
-![Live default collection list](screenshots/01_get_books.png)
+![GET all books](screenshots/allbooks.png)
 
-![Live search, price range, sorting and pagination](screenshots/01b_search_filter.png)
+### Create a new book
 
-![Live retrieval of an existing book](screenshots/02_get_book.png)
+![POST create a new book](screenshots/create_new_book.png)
 
-![Live missing book response](screenshots/02b_missing_book.png)
+### Delete a book
 
-![Live create book response returns 201](screenshots/03_create_book.png)
+![DELETE a book](screenshots/delete_book.png)
 
-![Invalid sort query returns 400](screenshots/04_validation.png)
+### Filter books by price
 
-![Live update response returns 200](screenshots/05_update.png)
+![GET books filtered by minimum and maximum price](screenshots/filter.png)
 
-![Live delete for a missing book returns 404](screenshots/06_delete_missing.png)
+### Book not found
 
-![Live delete response returns 200](screenshots/07_delete_book.png)
+![GET a missing book returns 404](screenshots/not_found.png)
+
+### Search books
+
+![GET books by search query](screenshots/search_books.png)
+
+### Update a book
+
+![PUT update a book](screenshots/update.png)
+
+### Validation error
+
+![POST with invalid book data returns 400](screenshots/validation_error.png)
 
 ## Debugging notes
 
